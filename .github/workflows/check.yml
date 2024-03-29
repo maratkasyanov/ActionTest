@@ -4,9 +4,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps: 
+      - name: Checkout
       uses: action/checkout@v3
-      -name: Checkout
-      -name: install deps
+      - name: install deps
       run: npm ci
-      -name: lint
+      - name: lint
       run: npm run lint
