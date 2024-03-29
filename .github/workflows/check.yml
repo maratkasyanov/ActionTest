@@ -10,3 +10,12 @@ jobs:
       run: npm install
     - name: lint
       run: npm run lint
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get repository code
+      uses: actions/checkout@v3
+    - name: Install deps
+      run: npm i
+    - name: Build App
+      run: npm run build
