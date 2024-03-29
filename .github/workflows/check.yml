@@ -3,10 +3,10 @@ on: push
 jobs:
   lint:
     runs-on: 'ubuntu-latest'
-      steps: 
-      -name: 'Checkout'
+    steps: 
+    - name: 'Checkout'
       uses: action/checkout@v3
-      -name: install deps
+    - name: install deps
       run: npm ci
-      -name: lint
+    - name: lint
       run: npm run lint
