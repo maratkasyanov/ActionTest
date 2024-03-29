@@ -2,9 +2,9 @@ name: Check
 on: push
 jobs:
   lint:
-    runs-on: 'ubuntu-latest'
+    runs-on: ubuntu-latest
     steps: 
-    - name: 'Checkout'
+    - name: Checkout
       uses: action/checkout@v3
     - name: install deps
       run: npm ci
