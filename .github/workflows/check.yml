@@ -15,7 +15,7 @@ jobs:
     steps:
     - name: Get repository code
       uses: actions/checkout@v3
-    - name: Install deps
-      run: npm ci
+    - name: install deps
+      run: npm i
     - name: Build App
       run: npm run build
