@@ -1,6 +1,15 @@
 name: Check
 on: push
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get repository code
+      uses: actions/checkout@v3
+    - name: Install deps
+      run: npm install
+    - name: Build App
+      run: npm run build
   lint:
     runs-on: ubuntu-latest
     steps: 
@@ -10,12 +19,4 @@ jobs:
       run: npm install
     - name: lint
       run: npm run lint
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get repository code
-      uses: actions/checkout@v3
-    - name: install deps
-      run: npm i
-    - name: Build App
-      run: npm run build
+ 
