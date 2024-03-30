@@ -10,12 +10,12 @@ function App() {
   const [status, setstatus] = useState([false, false])
   const [nums8,] = useState(Array.from({ length: 19 }, () => Math.floor(randomNumber(1, 99))))
   const [nums2,] = useState(Array.from({ length: 3 }, () => Math.floor(randomNumber(1, 99))))
-  const [selected8, setselected8]:any[] = useState([])
-  const [selected2, setselected2]:any[] = useState([])
+  const [selected8, setselected8]: any[] = useState([])
+  const [selected2, setselected2]: any[] = useState([])
   const [result,] = useState([uniqnumbers(nums8), Array.from({ length: 1 }, () => nums2[Math.floor(Math.random() * nums2.length)])])
   useEffect(() => {
-    console.log(selected8,selected2)
-  },[selected8,selected2])
+    console.log(selected8, selected2)
+  }, [selected8, selected2])
   function HandleMAgicWand() {
     setselected8(uniqnumbers(nums8))
     setselected2([nums2[Math.floor(Math.random() * nums2.length)]])
@@ -27,7 +27,7 @@ function App() {
           <div className='numsDiv'>
             <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
               <h2 className='bilH2'>Билет 1</h2>
-              <button onClick={HandleMAgicWand} style={{ color: 'black', border: 'none', backgroundColor: 'white' }}><img src={Magicwand}></img></button>
+              <button onClick={HandleMAgicWand} style={{ color: 'black', border: 'none', backgroundColor: 'white' }}>1<img src={Magicwand}></img></button>
             </div>
             <div className='centreDiv8'>
               <p className='descrP' style={{ color: 'black' }}>Поле 1</p>
