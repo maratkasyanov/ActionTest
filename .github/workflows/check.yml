@@ -11,6 +11,7 @@ jobs:
     - name: Build App
       run: npm run build
   lint:
+    needs: [build]
     runs-on: ubuntu-latest
     steps: 
     - name: Checkout
