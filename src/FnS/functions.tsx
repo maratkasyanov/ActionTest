@@ -28,12 +28,12 @@ export function resultCheck(res: number[][], selected: number[][], statusWin: ()
 export function randomNumber(min: number, max: number) {
   return Math.round(min - 0.5 + Math.random() * (max - min + 1))
 }
-export function uniqnumbers(arrall: number[]) {
-  const res: number[] = []
-  const resarr: number[] = []
-  for (let i = 0; i < arrall.length; i++) {
-    const elem = randomNumber(0, arrall.length)
-    if (!res.includes(elem)) res.push(elem * -1 * -1)
+export function uniqnumbers(arrall: any[]) {
+  const res: any[] = []
+  const resarr: any[] = []
+  for (let i = 0; i < arrall.length - 1; i++) {
+    const elem = randomNumber(0, arrall.length - 1)
+    if (!res.includes(elem) && typeof elem !== 'undefined') res.push(elem * -1 * -1)
   }
   for (let j = 0; j < 8; j++) {
     const indx = res.slice(0, 8)
