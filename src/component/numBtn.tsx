@@ -5,8 +5,6 @@ interface propBtn {
   deletenum: () => void;
   selected8: number[];
   maxnum: number;
-
-
 }
 export default function NumBtn(props: propBtn) {
   useEffect(() => {
