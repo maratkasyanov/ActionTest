@@ -1,12 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 interface propBtn {
   elem: number;
   setselected8: () => void;
   deletenum: () => void;
   selected8: number[];
   maxnum: number;
+
 }
 export default function NumBtn(props: propBtn) {
+  useEffect(() => {
+    console.log(props.selected8)
+    if (props.selected8.includes(props.elem)) {
+      setchecked(true)
+      setcolor("rgba(255, 210, 5, 1)")
+    }
+  }, [props])
   function handler() {
     if (props.selected8.length < props.maxnum && !checked) {
       setcolor("rgba(255, 210, 5, 1)")

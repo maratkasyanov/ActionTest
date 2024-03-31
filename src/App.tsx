@@ -5,22 +5,30 @@ import NumBtn from './component/numBtn';
 import { resultCheck } from './FnS/functions';
 import { uniqnumbers } from './FnS/functions';
 import { randomNumber } from './FnS/functions';
+import Magicwand from './img/magic-wand.png';
 function App() {
   const [status, setstatus] = useState([false, false])
   const [nums8,] = useState(Array.from({ length: 19 }, () => Math.floor(randomNumber(1, 99))))
   const [nums2,] = useState(Array.from({ length: 3 }, () => Math.floor(randomNumber(1, 99))))
-  const [selected8, setselected8] = useState([])
-  const [selected2, setselected2] = useState([])
+  const [selected8, setselected8]: any[] = useState([])
+  const [selected2, setselected2]: any[] = useState([])
   const [result,] = useState([uniqnumbers(nums8), Array.from({ length: 1 }, () => nums2[Math.floor(Math.random() * nums2.length)])])
   useEffect(() => {
-    console.log(...result[0])
-  })
+    console.log(selected8, selected2)
+  }, [selected8, selected2])
+  function HandleMAgicWand() {
+    setselected8(uniqnumbers(nums8))
+    setselected2([nums2[Math.floor(Math.random() * nums2.length)]])
+  }
   if (!status[0]) {
     return (
       <div className="container">
         <header className="App-header">
           <div className='numsDiv'>
-            <h2 className='bilH2'>Билет 1</h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+              <h2 className='bilH2'>Билет 1</h2>
+              <button onClick={HandleMAgicWand} style={{ color: 'black', border: 'none', backgroundColor: 'white' }}>1<img src={Magicwand}></img></button>
+            </div>
             <div className='centreDiv8'>
               <p className='descrP' style={{ color: 'black' }}>Поле 1</p>
               {nums8.map((elem, indx) => {
