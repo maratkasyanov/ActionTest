@@ -27,7 +27,7 @@ function App() {
           <div className='numsDiv'>
             <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
               <h2 className='bilH2'>Билет 1</h2>
-              <button onClick={HandleMAgicWand} style={{ color: 'black', border: 'none', backgroundColor: 'white' }}>1<img src={Magicwand}></img></button>
+              <button onClick={HandleMAgicWand} style={{ color: 'black', border: 'none', backgroundColor: 'white' }}><img src={Magicwand}></img></button>
             </div>
             <div className='centreDiv8'>
               <p className='descrP' style={{ color: 'black' }}>Поле 1</p>
