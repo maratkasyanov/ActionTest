@@ -6,6 +6,7 @@ interface propBtn {
   selected8: number[];
   maxnum: number;
 
+
 }
 export default function NumBtn(props: propBtn) {
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function NumBtn(props: propBtn) {
       setcolor("rgba(255, 210, 5, 1)")
     }
   }, [props])
+
   function handler() {
     if (props.selected8.length < props.maxnum && !checked) {
       setcolor("rgba(255, 210, 5, 1)")
