@@ -14,7 +14,6 @@ export default function NumBtn(props: propBtn) {
       setcolor("rgba(255, 210, 5, 1)")
     }
   }, [props])
-
   function handler() {
     if (props.selected8.length < props.maxnum && !checked) {
       setcolor("rgba(255, 210, 5, 1)")

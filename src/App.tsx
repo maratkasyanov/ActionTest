@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import './App.css';
 import NumBtn from './component/numBtn';
@@ -13,9 +13,7 @@ function App() {
   const [selected8, setselected8]: any[] = useState([])
   const [selected2, setselected2]: any[] = useState([])
   const [result,] = useState([uniqnumbers(nums8), Array.from({ length: 1 }, () => nums2[Math.floor(Math.random() * nums2.length)])])
-  useEffect(() => {
-    console.log(selected8, selected2)
-  }, [selected8, selected2])
+  ////тестовый
   function HandleMAgicWand() {
     setselected8(uniqnumbers(nums8))
     setselected2([nums2[Math.floor(Math.random() * nums2.length)]])
