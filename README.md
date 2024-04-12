@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-# ActionTest
-=======
->>>>>>> main
-=======
-<<<<<<< HEAD
-# ActionTest
-=======
->>>>>>> 75d9878738b74cd05af0f81dd09dde66f863f9de
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
